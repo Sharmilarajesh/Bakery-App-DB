@@ -47,7 +47,7 @@ export const CartProvider = ({ children }) => {
       prev.map((item) => {
         if (item.id === id) {
           const newQuantity = item.cartQuantity + 1;
-          // Only increase if it doesn't exceed available quantity
+         
           if (maxQuantity !== undefined && newQuantity > maxQuantity) {
             return item;
           }

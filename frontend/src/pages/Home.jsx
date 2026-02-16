@@ -75,16 +75,14 @@ const Home = () => {
 
   return (
     <div className="relative overflow-hidden min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50">
-      {/* REMOVED: Mouse-following spotlight */}
       
-      {/* Floating decorative elements */}
       <div className="absolute top-10 left-5 w-16 h-16 rounded-full bg-amber-200/20 float-slow" />
       <div className="absolute bottom-20 right-10 w-24 h-24 rounded-full bg-rose-200/20 float" />
       <div className="absolute top-1/3 right-1/4 w-12 h-12 rounded-full bg-yellow-200/20 float-slower" />
       <div className="absolute top-2/3 left-1/4 w-20 h-20 rounded-full bg-pink-200/20 float-slow" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-16 relative z-10">
-        {/* Hero Section */}
+
         <div className="text-center mb-16 fade-in">
           <div className="inline-block mb-6 relative group">
             <div className="absolute -inset-4 bg-gradient-to-r from-amber-200/40 to-rose-200/40 rounded-full blur-xl pulse-slow" />
@@ -100,7 +98,6 @@ const Home = () => {
             <div className="absolute -bottom-2 left-1/4 w-1/2 h-1 bg-gradient-to-r from-transparent via-[#C97C5D] to-transparent expand-line" />
           </div>
 
-          {/* Animated CTA Button */}
           <div className="mt-8 bounce-subtle">
             <Link 
               to="/products" 
@@ -120,7 +117,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Categories Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {categories.map((cat, index) => (
             <div
@@ -133,7 +129,6 @@ const Home = () => {
                 className="group block h-full card-hover"
               >
                 <div className={`h-full overflow-hidden rounded-3xl shadow-xl border border-gray-200/50 ${cat.color} hover:shadow-2xl transition-all duration-500 relative shimmer`}>
-                  {/* Image Container */}
                   <div className="relative overflow-hidden h-64">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10" />
                     <img
@@ -142,7 +137,6 @@ const Home = () => {
                       className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                     />
                     
-                    {/* Icon Badge */}
                     <div className="absolute top-4 right-4 z-20">
                       <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg text-2xl">
                         {cat.icon}
@@ -150,7 +144,6 @@ const Home = () => {
                     </div>
                   </div>
                   
-                  {/* Content */}
                   <div className="p-6 text-center relative">
                     <div className="absolute top-0 left-1/4 w-1/2 h-1 bg-gradient-to-r from-transparent via-[#C97C5D] to-transparent" />
                     
@@ -162,7 +155,6 @@ const Home = () => {
                       {cat.desc}
                     </p>
                     
-                    {/* Animated Button */}
                     <div className="relative inline-flex items-center justify-center">
                       <span className="relative px-6 py-3 bg-white border-2 border-[#C97C5D] text-[#C97C5D] font-semibold rounded-full group-hover:bg-[#C97C5D] group-hover:text-white transition-all duration-300 flex items-center gap-2 overflow-hidden">
                         <span className="relative z-10">Explore</span>
@@ -184,7 +176,6 @@ const Home = () => {
           ))}
         </div>
 
-        {/* Stats Section */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-10 fade-in" style={{ animationDelay: "0.3s" }}>
             Our Bakery in Numbers

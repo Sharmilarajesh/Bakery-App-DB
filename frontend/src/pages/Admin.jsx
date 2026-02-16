@@ -35,7 +35,7 @@ const Admin = () => {
       setIsLoading(true);
       const data = await fetchProducts();
       setProducts(data);
-      // Initialize quantity values
+     
       const initialQuantities = {};
       data.forEach((product) => {
         initialQuantities[product._id] = product.quantity || 0;
@@ -66,7 +66,6 @@ const Admin = () => {
     try {
       setIsLoading(true);
       const updatedProduct = await updateProductQuantity(productId, newQuantity);
-      // Update the product in the list
       setProducts((prev) =>
         prev.map((p) => (p._id === productId ? updatedProduct : p))
       );

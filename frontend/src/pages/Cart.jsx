@@ -34,7 +34,7 @@ const Cart = () => {
   };
 
   const handlePay = async () => {
-    // Validate form
+
     if (
       !formData.customerName.trim() ||
       !formData.phone.trim() ||
@@ -58,14 +58,12 @@ const Cart = () => {
         })),
       };
 
-      // Create order via API
       await createOrder(orderData);
 
-      // Show success message
       setShowPaymentSuccess(true);
       setShowCheckoutForm(false);
 
-      // Clear cart after a delay
+
       setTimeout(() => {
         clearCart();
         setFormData({ customerName: "", phone: "", address: "" });
@@ -89,7 +87,7 @@ const Cart = () => {
           Your cart is empty
         </h2>
         <p className="text-gray-600 mb-6">Add some delicious treats!</p>
-        {/* CHANGE THIS: Use Link instead of <a> */}
+
         <Link
           to="/products"
           className="px-6 py-3 bg-[#C97C5D] text-white font-medium rounded-full hover:bg-[#B36A50] transition-colors inline-block"
@@ -99,7 +97,7 @@ const Cart = () => {
       </div>
     );
 
-  // Payment Success Message
+
   if (showPaymentSuccess) {
     return (
       <div className="max-w-md mx-auto px-6 pt-24 pb-16 text-center">
@@ -108,7 +106,7 @@ const Cart = () => {
           <h2 className="text-2xl font-bold text-green-800 mb-2">
             Order Placed Successfully!
           </h2>
-          <p className="text-green-700 mb-2">₹{total} has been paid</p>
+         
           <p className="text-gray-600 font-semibold">
             Your order will be delivered soon!
           </p>
@@ -228,7 +226,7 @@ const Cart = () => {
             key={item.id}
             className="bg-white rounded-xl shadow p-6 flex items-center justify-between border border-gray-200 hover:shadow-md transition-shadow duration-300 fade-in-up"
           >
-            {/* Left: Product Info */}
+          
             <div className="flex items-center gap-4">
               <img
                 src={getImageUrl(item.img)}
@@ -276,7 +274,6 @@ const Cart = () => {
         ))}
       </div>
 
-      {/* Total & Actions */}
       <div className="bg-gray-50 rounded-xl p-6">
         <div className="flex justify-between items-center mb-6">
           <h3 className="text-2xl font-bold">Total</h3>

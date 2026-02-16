@@ -4,14 +4,20 @@ const orderSchema = new mongoose.Schema({
   customerName: { type: String, required: true },
   phone: { type: String, required: true },
   address: { type: String, required: true },
-items: [
-  {
-    productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
-    quantity: { type: Number, required: true }
-  }
-],
 
-  status: { type: String, default: "Placed" }, // Placed → Completed
+  items: [
+    {
+      productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
+      productName: { type: String, required: true },
+      unitPrice: { type: Number, required: true },
+      quantity: { type: Number, required: true },
+      subtotal: { type: Number, required: true }
+    }
+  ],
+
+  totalAmount: { type: Number, required: true },
+
+  status: { type: String, default: "Placed" },
   createdAt: { type: Date, default: Date.now },
 });
 
